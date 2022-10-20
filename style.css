@@ -3,3 +3,8 @@
 #site-name {
     font-family: 'Berkshire Swash', cursive;
 }
+
+.btn-disabled-color:disabled {
+    background: grey;
+    color: rgb(87, 79, 79);
+}
