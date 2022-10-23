@@ -67,7 +67,7 @@
                 </div>
             </div>
 
-
+            <!-- selected player list -->
             <div class="grid grid-cols-1  w-1/4">
                 <div class="conatiner mx-auto  border-stone-500 border-2 mb-8">
                     <h1 class="text-4xl px-16 pt-8 pb-8">Selected - <span id="playerCount"
@@ -78,32 +78,34 @@
                         </ol>
                     </div>
                 </div>
+
+                <!-- cost calculation -->
                 <div class="conatiner mx-auto text-center border-stone-500 border-2 mb-8">
                     <h1 class="text-4xl px-24 pt-8 pb-8">Budget</h1>
                     <div class="flex justify-center ">
                         <h2 class="text-base text-gray-400 font-medium pr-2">Per Player</h2>
-                        <input class="bg-gray-900 border-white border-2 w-1/2 h-8" type="text">
+                        <input id="per-player-cost" class="bg-gray-900 border-white border-2 w-1/2 h-8" type="text">
 
                     </div>
-                    <button class="bg-orange-600 py-2 px-20 my-4">Calculate</button>
+                    <button onclick="totalPlayerCost()" class="bg-orange-600 py-2 px-20 my-4">Calculate</button>
 
 
-                    <h2 class="text-xl text-gray-400 font-medium mt-4  text-center">Player Expenses <span
-                            class="pl-4">$0</span>
+                    <h2 class="text-xl text-gray-400 font-medium mt-4  text-center">Player Expenses <span class="pl-4">$
+                            <span id="displayTotalPlayerExpenses">0</span></span>
                     </h2>
                     <div class="flex justify-center  my-4">
                         <h2 class="text-base text-gray-400 font-medium pr-3">Manager</h2>
-                        <input class="bg-gray-900 border-white border-2 w-1/2 h-8 ml-4" type="text">
+                        <input id="manager-cost" class="bg-gray-900 border-white border-2 w-1/2 h-8 ml-4" type="text">
 
                     </div>
                     <div class="flex justify-center ">
                         <h2 class="text-base text-gray-400 font-medium pr-3">Coach</h2>
-                        <input class="bg-gray-900 border-white border-2 w-1/2 h-8 ml-8" type="text">
+                        <input id="coach-cost" class="bg-gray-900 border-white border-2 w-1/2 h-8 ml-8" type="text">
 
                     </div>
-                    <button class="bg-orange-600 py-2 px-16 my-4">Calculate Total</button>
-                    <h2 class="text-xl text-gray-400 font-medium mt-4  text-center">Total <span
-                            class="pl-36">$0000</span>
+                    <button onclick="CalculateTotal()" class="bg-orange-600 py-2 px-16 my-4">Calculate Total</button>
+                    <h2 class="text-xl text-gray-400 font-medium mt-4  text-center">Total <span class="pl-36">$<span
+                                id="total">0000</span></span>
                     </h2>
                 </div>
             </div>
