@@ -1,3 +1,4 @@
+//player list
 function display(playerList) {
 
     const list = document.getElementById('SelectedPlayerList');
@@ -32,21 +33,20 @@ function selectPlayer(element) {
     }
 }
 
+
+//calculation part
 function totalPlayerCost() {
-    const perPlayerCostElement = document.getElementById('per-player-cost').value;
-    const totalPlayerNumber = parseInt(document.getElementById('playerCount').innerText);
-    const perPlayerCost = parseInt(perPlayerCostElement);
+    const perPlayerCost = getInputFieldValue('per-player-cost');
+    const totalPlayerNumber = getTextElementValue('playerCount');
     const totalPlayerCost = totalPlayerNumber * perPlayerCost;
-    const displayTotalPlayerExpenses = document.getElementById('displayTotalPlayerExpenses');
-    displayTotalPlayerExpenses.innerText = totalPlayerCost;
+    setTextElementValue('displayTotalPlayerExpenses', totalPlayerCost);
 }
 
 function CalculateTotal() {
-    const managerCost = parseInt(document.getElementById('manager-cost').value);
-    const coachCost = parseInt(document.getElementById('coach-cost').value);
-    const totalPlayerCost = parseInt(document.getElementById('displayTotalPlayerExpenses').innerText);
+    const managerCost = getInputFieldValue('manager-cost');
+    const coachCost = getInputFieldValue('coach-cost');
+    const totalPlayerCost = getTextElementValue('displayTotalPlayerExpenses');
 
     const totalExpenses = managerCost + coachCost + totalPlayerCost;
-    const displayTotal = document.getElementById('total');
-    displayTotal.innerText = totalExpenses;
+    setTextElementValue('total', totalExpenses);
 }
