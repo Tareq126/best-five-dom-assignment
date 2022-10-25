@@ -32,13 +32,9 @@ function selectPlayer(element) {
     }
 }
 
-// const totalPlayer = document.getElementById('playerCount');
-// const totalPlayerNumber = parseInt(totalPlayer.innerText);
-// console.log(totalPlayerNumber);
-
-const totalPlayerNumber = 5;
 function totalPlayerCost() {
     const perPlayerCostElement = document.getElementById('per-player-cost').value;
+    const totalPlayerNumber = parseInt(document.getElementById('playerCount').innerText);
     const perPlayerCost = parseInt(perPlayerCostElement);
     const totalPlayerCost = totalPlayerNumber * perPlayerCost;
     const displayTotalPlayerExpenses = document.getElementById('displayTotalPlayerExpenses');
